@@ -21,7 +21,7 @@ rpminstalled.srv-tixdmz-02.strg.arte.txt
 - abattis-cantarell-fonts.noarch|0.0.25-1.el7
 - abrt-addon-ccpp.x86_64|2.1.11-50.el7.centos
 
-#File in 2:
+# File in 2:
 And:
 checkupdate.srv-tixdmz-02.strg.arte.txt
 \#yum check-update|tr "\n" "#" | sed -e 's/# / /g' | tr "#" "\n"|awk '{print $1"|"$2}'|grep -v "^*"|grep -v "^Loaded"| \
