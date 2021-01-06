@@ -24,8 +24,8 @@ rpminstalled.srv-tixdmz-02.strg.arte.txt
 
 And:
 checkupdate.srv-tixdmz-02.strg.arte.txt
-#yum check-update|tr "\n" "#" | sed -e 's/# / /g' | tr "#" "\n"|awk '{print $1"|"$2}'|grep -v "^*"|grep -v "^Loaded"| \
-#         grep -v "^Loading"|grep -v "^Obsoleting"|grep -v "^Last"|grep -v "^|"|sort|uniq  > /tmp/checkupdate_yumdev.txt
+\#yum check-update|tr "\n" "#" | sed -e 's/# / /g' | tr "#" "\n"|awk '{print $1"|"$2}'|grep -v "^*"|grep -v "^Loaded"| \
+\#         grep -v "^Loading"|grep -v "^Obsoleting"|grep -v "^Last"|grep -v "^|"|sort|uniq  > /tmp/checkupdate_yumdev.txt
 
 - abrt-addon-ccpp.x86_64|2.1.11-60.el7.centos
 - abrt-addon-kerneloops.x86_64|2.1.11-60.el7.centos
@@ -56,4 +56,4 @@ cd /home/buerfent/ansible3/PROJ4_RPM_QA
 #/usr/bin/python2 security.py rpminstalled.srv-tixdmz-02.strg.arte.txt checkupdate.srv-tixdmz-02.strg.arte.txt  out.txt
 /usr/bin/python2 security.py $1 $2 $3
 cat $3|sort > resultat_sorted_$3
-```bash
+```
