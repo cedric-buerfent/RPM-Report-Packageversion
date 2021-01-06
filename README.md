@@ -10,18 +10,18 @@ The list has 3 columns:
 -                   [-] (means new install. Nothing to replace)                                     
 
 
-
-#/usr/bin/python2 security.py rpminstalled.srv-tixdmz-02.strg.arte.txt checkupdate.srv-tixdmz-02.strg.arte.txt  out.txt
+# Script Invokation
+\#/usr/bin/python2 security.py rpminstalled.srv-tixdmz-02.strg.arte.txt checkupdate.srv-tixdmz-02.strg.arte.txt  out.txt
 /usr/bin/python2 security.py $1 $2 $3
 
-With:
+# File in 1:
 "Give me a list of all actually installed (old) packages":
 rpminstalled.srv-tixdmz-02.strg.arte.txt
 #rpm -qa --queryformat "%{NAME}.%{ARCH}|%{VERSION}-%{RELEASE}\n"|sort > /tmp/rpmquery_dev.txt
 - abattis-cantarell-fonts.noarch|0.0.25-1.el7
 - abrt-addon-ccpp.x86_64|2.1.11-50.el7.centos
 
-
+#File in 2:
 And:
 checkupdate.srv-tixdmz-02.strg.arte.txt
 \#yum check-update|tr "\n" "#" | sed -e 's/# / /g' | tr "#" "\n"|awk '{print $1"|"$2}'|grep -v "^*"|grep -v "^Loaded"| \
@@ -31,7 +31,7 @@ checkupdate.srv-tixdmz-02.strg.arte.txt
 - abrt-addon-kerneloops.x86_64|2.1.11-60.el7.centos
 - abrt-addon-pstoreoops.x86_64|2.1.11-60.el7.centos
 
-Result:
+# File out Result:
 out.txt
 - abrt-addon-ccpp,2.1.11-50.el7.centos,2.1.11-60.el7.centos
 - abrt-addon-kerneloops,2.1.11-50.el7.centos,2.1.11-60.el7.centos
