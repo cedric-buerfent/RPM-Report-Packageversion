@@ -4,10 +4,10 @@ Small documentation. Start 6/1/2020 CB
 
 Returns a csv list we can import into Excel to create a RPM report.
 The list has 3 columns:
-Packagename,  Current-Version,   New-Available-Version
-With dashs if info not available:
-                                           [-]  (means no new version. Keep current)            
-                  [-] (means new install. Nothing to replace)                                     
+- Packagename,  Current-Version,   New-Available-Version
+- With dashs if info not available:
+-                                           [-]  (means no new version. Keep current)            
+-                   [-] (means new install. Nothing to replace)                                     
 
 
 
